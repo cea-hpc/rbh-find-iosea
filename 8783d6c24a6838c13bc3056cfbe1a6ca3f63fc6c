@@ -41,6 +41,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "056c4e93_9805c313",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1019048
+      },
+      "writtenOn": "2022-04-12T13:52:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b28ea5a7_1433002c",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "8783d6c24a6838c13bc3056cfbe1a6ca3f63fc6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8dbefd0_eccffd90",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-04-12T09:17:49Z",
       "side": 1,
       "message": "minor: rbh-find ?",
+      "range": {
+        "startLine": 52,
+        "startChar": 31,
+        "endLine": 52,
+        "endChar": 35
+      },
+      "revId": "8783d6c24a6838c13bc3056cfbe1a6ca3f63fc6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "522b97d9_f57dab4e",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1019048
+      },
+      "writtenOn": "2022-04-12T13:52:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8dbefd0_eccffd90",
       "range": {
         "startLine": 52,
         "startChar": 31,
