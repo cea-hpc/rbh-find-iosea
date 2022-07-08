@@ -20,21 +20,51 @@ str2iosea_predicate(const char *string)
 {
     assert(string[0] == '-');
 
-    if (strcmp(&string[1], "placeholder") == 0)
-        error(EX_USAGE, ENOTSUP, "placeholder predicate");
+    switch (string[1]) {
+    case 'd':
+        if (strcmp(&string[2], "ataset") == 0)
+            return IPRED_DATASET;
+        break;
+    case 'f':
+        if (strcmp(&string[2], "requency") == 0)
+            return IPRED_FREQUENCY;
+        break;
+    case 'h':
+        if (strcmp(&string[2], "sm-hint") == 0)
+            return IPRED_HSM_HINT;
+        break;
+    case 'l':
+        if (strcmp(&string[2], "ifetime") == 0)
+            return IPRED_LIFETIME;
+        break;
+    case 'p':
+        if (strcmp(&string[2], "olicy") == 0)
+            return IPRED_POLICY;
+        break;
+    case 's':
+        if (strcmp(&string[2], "imilarity") == 0)
+            return IPRED_SIMILARITY;
+        break;
+    }
 
     return str2predicate(string);
 }
 
+#define LOCAL(X) (X) - IPRED_MIN
 static const char *__iosea_predicate2str[] = {
-    [PRED_PLACEHOLDER]  = "placeholder",
+    [LOCAL(IPRED_DATASET)]    = "dataset",
+    [LOCAL(IPRED_FREQUENCY)]  = "frequency",
+    [LOCAL(IPRED_HSM_HINT)]   = "hsm-hint",
+    [LOCAL(IPRED_LIFETIME)]   = "lifetime",
+    [LOCAL(IPRED_POLICY)]     = "policy",
+    [LOCAL(IPRED_SIMILARITY)] = "similarity",
 };
 
 const char *
 iosea_predicate2str(int predicate)
 {
-    if (predicate >= PRED_PLACEHOLDER)
-        return __iosea_predicate2str[predicate];
+    if (IPRED_MIN <= predicate && predicate < IPRED_LAST)
+        return __iosea_predicate2str[LOCAL(predicate)];
 
     return predicate2str(predicate);
 }
