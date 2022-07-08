@@ -11,7 +11,16 @@
 #include <rbh-find/parser.h>
 
 enum iosea_predicate {
-    PRED_PLACEHOLDER = 128,
+    IPRED_MIN = PRED_LAST,
+
+    IPRED_DATASET = IPRED_MIN,
+    IPRED_FREQUENCY,
+    IPRED_HSM_HINT,
+    IPRED_LIFETIME,
+    IPRED_POLICY,
+    IPRED_SIMILARITY,
+
+    IPRED_LAST
 };
 
 /**
