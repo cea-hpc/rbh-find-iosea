@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cabc99b7_5002894f",
+        "filename": "src/parser.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2022-07-08T14:59:30Z",
+      "side": 1,
+      "message": "typo: no \u0027l\u0027",
+      "range": {
+        "startLine": 37,
+        "startChar": 32,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "3209c3d0552be93a0b14ae4c4b845a28021b4ce3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f33b7bb_fa1f24de",
+        "filename": "src/parser.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2022-07-08T14:59:30Z",
+      "side": 1,
+      "message": "question: where does this come from?",
+      "range": {
+        "startLine": 55,
+        "startChar": 5,
+        "endLine": 55,
+        "endChar": 10
+      },
+      "revId": "3209c3d0552be93a0b14ae4c4b845a28021b4ce3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
