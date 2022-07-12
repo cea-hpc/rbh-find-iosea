@@ -93,6 +93,30 @@
       },
       "revId": "3209c3d0552be93a0b14ae4c4b845a28021b4ce3",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "898cbe45_344d4b8b",
+        "filename": "src/parser.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2022-07-12T07:10:45Z",
+      "side": 1,
+      "message": "I think I have to learn how to read properly. I didn\u0027t see the definition of the macro above... You can leave the code as it is.",
+      "parentUuid": "d76bc6a8_41b92867",
+      "range": {
+        "startLine": 55,
+        "startChar": 5,
+        "endLine": 55,
+        "endChar": 10
+      },
+      "revId": "3209c3d0552be93a0b14ae4c4b845a28021b4ce3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
