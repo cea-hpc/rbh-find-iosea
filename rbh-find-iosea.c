@@ -43,28 +43,8 @@ iosea_predicate_or_action(const char *string)
     switch (string[0]) {
     case '-':
         switch (string[1]) {
-        case 'd':
-            if (!strcmp(&string[2], "ataset"))
-                return CLT_PREDICATE;
-            break;
-        case 'f':
-            if (!strcmp(&string[2], "requency"))
-                return CLT_PREDICATE;
-            break;
-        case 'h':
-            if (!strcmp(&string[2], "sm-hint"))
-                return CLT_PREDICATE;
-            break;
-        case 'l':
-            if (!strcmp(&string[2], "ifetime"))
-                return CLT_PREDICATE;
-            break;
-        case 'p':
-            if (!strcmp(&string[2], "olicy"))
-                return CLT_PREDICATE;
-            break;
-        case 's':
-            if (!strcmp(&string[2], "imilarity"))
+        case 't':
+            if (!strcmp(&string[2], "ier-index"))
                 return CLT_PREDICATE;
             break;
         }
@@ -93,15 +73,9 @@ iosea_parse_predicate(struct find_context *ctx, int *arg_idx)
      * precise and meaningful error messages.
      */
     switch (predicate) {
-    case IPRED_DATASET:
-    case IPRED_FREQUENCY:
-    case IPRED_HSM_HINT:
-    case IPRED_LIFETIME:
-    case IPRED_POLICY:
-    case IPRED_SIMILARITY:
-        error(EXIT_FAILURE, ENOTSUP, "%s", iosea_predicate2str(predicate));
-        /* clang: -Wsometimes-unitialized: `filter` */
-        __builtin_unreachable();
+    case IPRED_TIER_INDEX:
+        filter = tier_index2filter(ctx->argv[++i]);
+        break;
     default:
         filter = find_parse_predicate(ctx, &i);
         break;
@@ -142,8 +116,13 @@ main(int _argc, char *_argv[])
     if (ctx.backends == NULL)
         error(EXIT_FAILURE, errno, "malloc");
 
+    ctx.uris = malloc(index * sizeof(*ctx.uris));
+    if (!ctx.uris)
+        error(EXIT_FAILURE, errno, "malloc");
+
     for (int i = 0; i < index; i++) {
         ctx.backends[i] = rbh_backend_from_uri(ctx.argv[i]);
+        ctx.uris[i] = ctx.argv[i];
         ctx.backend_count++;
     }
 

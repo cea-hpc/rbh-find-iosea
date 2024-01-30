@@ -13,15 +13,15 @@
 #include <rbh-find/filters.h>
 
 /**
- * Placeholder function for future fields to filter.
+ * Build a filter for the -tier-index predicate
  *
- * @param placeholder_field  placeholder field name
+ * @param tier         a string representing a tier index
  *
  * @return             a pointer to a newly allocated struct rbh_filter
  *
  * Exit on error
  */
 struct rbh_filter *
-placeholder2filter(const char *placeholder_field);
+tier_index2filter(const char *tier_index);
 
 #endif
