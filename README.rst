@@ -55,6 +55,18 @@ differences of `rbh-ifind` compared to `rbh-find`.
 
 .. _: https://github.com/cea-hpc/rbh-find/README.rst
 
+Extra features
+==============
+
+-tier
+----------
+
+rbh-ifind defines a ``-tier`` action that filters the entries based on the tier
+they are on. It should be given a numerical value corresponding to the targeted
+tier index.
+
+.. code:: bash
+
 Examples
 --------
 

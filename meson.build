@@ -1,5 +1,5 @@
 # This file is part of the rbh-find-iosea project
-# Copyright (C) 2022 Commissariat a l'energie atomique et aux energies
+# Copyright (C) 2024 Commissariat a l'energie atomique et aux energies
 # 		      alternatives
 #
 # SPDX-License-Identifer: LGPL-3.0-or-later
@@ -48,3 +48,4 @@ executable(
 	include_directories: include_dirs,
 	install: true,
 )
+subdir('tests')

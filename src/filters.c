@@ -6,19 +6,43 @@
  */
 
 #include <error.h>
+#include <limits.h>
 #include <stdlib.h>
+#include <string.h>
+#include <sysexits.h>
 
 #include <robinhood/backend.h>
+#include <rbh-find/utils.h>
 
 #include "filters.h"
 
+static const struct rbh_filter_field predicate2filter_field[] = {
+    [IPRED_TIER - IPRED_MIN] = {.fsentry = RBH_FP_INODE_XATTRS,
+                                .xattr = "tiers.index"},
+};
+
 struct rbh_filter *
-placeholder2filter(const char *placeholder_field)
+tier2filter(const char *_tier)
 {
-    (void) placeholder_field;
+    struct rbh_filter *filter;
+    uint64_t tier;
+    int rc;
 
-    error_at_line(EXIT_FAILURE, ENOTSUP, __FILE__, __LINE__,
-                  "placeholder2filter");
+    if (_tier[0] == '-')
+        error(EX_USAGE, errno, "tier cannot be negative: `%s'", _tier);
 
-    return NULL;
+    rc = str2uint64_t(_tier, &tier);
+    if (rc)
+        error(EX_USAGE, errno, "invalid tier: `%s'", _tier);
+
+    filter = rbh_filter_compare_uint32_new(
+        RBH_FOP_EQUAL,
+        &predicate2filter_field[IPRED_TIER - IPRED_MIN],
+        tier
+    );
+    if (filter == NULL)
+        error_at_line(EXIT_FAILURE, errno, __FILE__, __LINE__,
+                      "rbh_filter_compare_uint32_new");
+
+    return filter;
 }
