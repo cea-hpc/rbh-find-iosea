@@ -24,4 +24,16 @@
 struct rbh_filter *
 tier2filter(const char *tier);
 
+/**
+ * Build a filter for the -extent-size predicate
+ *
+ * @param extent_size  a string representing an extent size
+ *
+ * @return             a pointer to a newly allocated struct rbh_filter
+ *
+ * Exit on error
+ */
+struct rbh_filter *
+extent_size2filter(const char *extent_size);
+
 #endif
