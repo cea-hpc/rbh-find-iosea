@@ -21,6 +21,10 @@ str2iosea_predicate(const char *string)
     assert(string[0] == '-');
 
     switch (string[1]) {
+    case 'e':
+        if (strcmp(&string[2], "xtent-size") == 0)
+            return IPRED_EXTENT_SIZE;
+        break;
     case 't':
         if (strcmp(&string[2], "ier") == 0)
             return IPRED_TIER;
@@ -32,7 +36,8 @@ str2iosea_predicate(const char *string)
 
 #define LOCAL(X) (X) - IPRED_MIN
 static const char *__iosea_predicate2str[] = {
-    [LOCAL(IPRED_TIER)]    = "tier",
+    [LOCAL(IPRED_EXTENT_SIZE)]   = "extent-size",
+    [LOCAL(IPRED_TIER)]          = "tier",
 };
 
 const char *
