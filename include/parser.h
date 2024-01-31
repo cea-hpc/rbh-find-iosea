@@ -14,6 +14,7 @@ enum iosea_predicate {
     IPRED_MIN = PRED_LAST,
 
     IPRED_TIER_INDEX = IPRED_MIN,
+    IPRED_EXTENT_SIZE,
 
     IPRED_LAST
 };

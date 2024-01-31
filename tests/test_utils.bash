@@ -27,7 +27,7 @@ mongo()
 
 hestia_obj()
 {
-    hestia object --verbosity 1 $@
+    hestia object --verbosity 1 "$@"
 }
 
 setup()

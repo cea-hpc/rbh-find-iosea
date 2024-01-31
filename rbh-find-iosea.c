@@ -43,6 +43,10 @@ iosea_predicate_or_action(const char *string)
     switch (string[0]) {
     case '-':
         switch (string[1]) {
+        case 'e':
+            if (!strcmp(&string[2], "xtent-size"))
+                return CLT_PREDICATE;
+            break;
         case 't':
             if (!strcmp(&string[2], "ier-index"))
                 return CLT_PREDICATE;
@@ -73,6 +77,9 @@ iosea_parse_predicate(struct find_context *ctx, int *arg_idx)
      * precise and meaningful error messages.
      */
     switch (predicate) {
+    case IPRED_EXTENT_SIZE:
+        filter = extent_size2filter(ctx->argv[++i]);
+        break;
     case IPRED_TIER_INDEX:
         filter = tier_index2filter(ctx->argv[++i]);
         break;
