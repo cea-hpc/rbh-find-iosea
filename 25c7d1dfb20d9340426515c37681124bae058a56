@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96d162da_a2cbd5cb",
+        "filename": "rbh-find-iosea.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2024-01-31T15:04:09Z",
+      "side": 1,
+      "message": "question: why not simply -tier?",
+      "range": {
+        "startLine": 47,
+        "startChar": 40,
+        "endLine": 47,
+        "endChar": 46
+      },
+      "revId": "25c7d1dfb20d9340426515c37681124bae058a56",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
