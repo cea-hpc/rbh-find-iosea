@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5db39180_91c7bb78",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2024-02-02T08:25:25Z",
+      "side": 1,
+      "message": "comment: its not that they CANNOT, but it won\u0027t work as expected.",
+      "range": {
+        "startLine": 13,
+        "startChar": 35,
+        "endLine": 13,
+        "endChar": 63
+      },
+      "revId": "475f8d0d897310df4a11ebf25184074284ce6fe9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11180375_7f80ae9f",
+        "filename": "src/filters.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2024-02-02T08:25:25Z",
+      "side": 1,
+      "message": "question: can\u0027t you just reuse the function of rbh-find?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 18
+      },
+      "revId": "475f8d0d897310df4a11ebf25184074284ce6fe9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
