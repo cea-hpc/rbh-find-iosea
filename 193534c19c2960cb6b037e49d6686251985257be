@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "044c50f5_621e8b9f",
+        "filename": "README.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1019142
+      },
+      "writtenOn": "2024-02-06T10:16:28Z",
+      "side": 1,
+      "message": "minor: this is not an action but a filter or a predicate.",
+      "range": {
+        "startLine": 64,
+        "startChar": 30,
+        "endLine": 64,
+        "endChar": 36
+      },
+      "revId": "193534c19c2960cb6b037e49d6686251985257be",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
